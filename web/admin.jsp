@@ -1,5 +1,6 @@
 <%@page import="model.Product"%>
 <%@page import="model.User"%>
+<%@page import="model.Category"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="controller.Validate"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
