@@ -141,11 +141,11 @@
       <nav>
         <ul>
           <li><a href="homeServlet">Trang ch?</a></li>
-          <li><a href="http://localhost:3000/admin/create">??ng b‡i m?i</a></li>
+          <li><a href="http://localhost:3000/admin/create">??ng b√†i m?i</a></li>
           <li><a href="http://localhost:3000/admin/stored-main">N?i dung trang ch?</a></li>
-          <li><a href="http://localhost:3000/admin/stored-c1">B‡i b·o Champion League</a></li>
-          <li><a href="http://localhost:3000/admin/stored-euro">B‡i b·o Euro</a></li>
-          <li><a href="http://localhost:3000/admin/stored-epl">B‡i b·o Epl</a></li>
+          <li><a href="http://localhost:3000/admin/stored-c1">B√†i b√°o Champion League</a></li>
+          <li><a href="http://localhost:3000/admin/stored-euro">B√†i b√°o Euro</a></li>
+          <li><a href="http://localhost:3000/admin/stored-epl">B√†i b√°o Epl</a></li>
           <li><a href="ProcessLogout">Sign out</a></li>
 
         </ul>
@@ -154,13 +154,13 @@
         <div class="content">
           <div class="sidebar">
             <ul>
-                <li style="margin-left: 12px;"><a href="admin?action=manage_product" class="manage_product" >Qu?n l˝ s?n ph?m</a></li>
-                <li style="margin-left: 12px;"><a href="admin?action=manage_user" class="manage_user">Qu?n l˝ ng??i d˘ng</a></li>
-                <li style="margin-left: 12px;"><a href="admin">Th?ng kÍ</a></li>
+                <li style="margin-left: 12px;"><a href="admin?action=manage_product" class="manage_product" >Qu?n l√Ω s?n ph?m</a></li>
+                <li style="margin-left: 12px;"><a href="admin?action=manage_user" class="manage_user">Qu?n l√Ω ng??i d√πng</a></li>
+                <li style="margin-left: 12px;"><a href="admin">Th?ng k√™</a></li>
             </ul>
           </div>
           <div class="main">
-            <a href="EditProduct?action=add_new_product">ThÍm s?n ph?m</a> <br>
+            <a href="EditProduct?action=add_new_product">Th√™m s?n ph?m</a> <br>
             
             <c:if test="${sessionScope.displayUser eq 'block'}">
                 <form action="admin" method="get" style="padding-bottom: 10px">
@@ -181,7 +181,7 @@
             <table class="table" style="overflow: auto ;color: rgb(36, 38, 41); display: <%= Validate.StringUtil((String) session.getAttribute("displayUser")) %> ; ">
                 <thead>
                     <tr >
-                    <th scope="col" style="color: rgb(36, 38, 41);">TÍn</th>
+                    <th scope="col" style="color: rgb(36, 38, 41);">T√™n</th>
                     <th scope="col" style="color: rgb(36, 38, 41);">Email</th>
                     <th scope="col" style="color: rgb(36, 38, 41);">SDT</th>
                     <th style="color: rgb(36, 38, 41);">Ch?nh s?a</th>
@@ -198,8 +198,8 @@
                     <td ><%= x.getPhone() %></td>
                     <td>
                         <!--<a href="/c1/{{this._id}}/edit" class="btn btn-primary">S?a</a>-->
-                        <a href="EditUser?action=Delete&email=<%= x.getEmail() %>" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal">XÛa</a>
-                        <a href="/c1/{{this.slug}}" class="btn btn-primary">Xem b‡i vi?t</a>
+                        <a href="EditUser?action=Delete&email=<%= x.getEmail() %>" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-course-modal">X√≥a</a>
+                        <a href="/c1/{{this.slug}}" class="btn btn-primary">Xem b√†i vi?t</a>
 
                     </td>
                     </tr>
@@ -225,8 +225,8 @@
                     <tr>
                         <th scope="row" style="color: black;">${product.id}</th>
                         <td>${product.name}</td>
-                        <td >${product.price} VN–</td>
-                        <td>${product.type}</td>
+                        <td >${product.price} VN√ê</td>
+                        <td>${product.cate.name}</td>
                     <td>
                         <a href="EditProduct?action=Edit_product&id=${id}" class="btn btn-primary">Edit</a>
                         <a href="EditProduct?action=deleteProduct&id=${id}" class="btn btn-primary">Dele</a>
@@ -242,7 +242,7 @@
     </div>
 
     <div class="footer">
-      <p>© 2023</p>
+      <p>¬© 2023</p>
     </div>
 
     <!-- confirm  delete -->
@@ -252,15 +252,15 @@
       <div class="modal-dialog">
           <div class="modal-content">
           <div class="modal-header">
-              <h5 class="modal-title">X·c nh?n</h5>
+              <h5 class="modal-title">X√°c nh?n</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <p>B?n ch?c ch?n mu?n xÛa b‡i vi?t n‡y ?</p>
+              <p>B?n ch?c ch?n mu?n x√≥a b√†i vi?t n√†y ?</p>
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">H?y</button>
-              <button id="btn-delete-c1" type="button" class="btn btn-danger">XÛa</button>
+              <button id="btn-delete-c1" type="button" class="btn btn-danger">X√≥a</button>
           </div>
           </div>
       </div>
