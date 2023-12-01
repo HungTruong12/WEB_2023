@@ -226,7 +226,7 @@
                         <th scope="row" style="color: black;">${product.id}</th>
                         <td>${product.name}</td>
                         <td >${product.price} VNÐ</td>
-                        <td>${product.cate.name}</td>
+                        <td>${product.cate.nameCate}</td>
                     <td>
                         <a href="EditProduct?action=Edit_product&id=${id}" class="btn btn-primary">Edit</a>
                         <a href="EditProduct?action=deleteProduct&id=${id}" class="btn btn-primary">Dele</a>
