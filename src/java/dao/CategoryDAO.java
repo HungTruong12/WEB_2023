@@ -16,7 +16,7 @@ public class CategoryDAO extends DBContext{
     
     public Category getCategory(int id){
         try {
-            String sql = "SELECT * FROM WHERE id = ?";
+            String sql = "SELECT * FROM Category WHERE id = ?";
             PreparedStatement ps = c.prepareStatement(sql);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
